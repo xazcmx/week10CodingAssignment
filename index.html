@@ -1,0 +1,76 @@
+<!-- 1.	Using HTML, Bootstrap, and JavaScript create a single page website that contains the following:
+a.	A Bootstrap styled table representing your choice of data.
+b.	A Bootstrap styled form that allows a user to add a new row to the table when submitted. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Functionality</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body class="color">
+    <br>
+    <div class="jumbotron container jumbo-bg-color">
+        <h1 class="display-2 container">Plant Wish List</h1>
+        <p class="lead container">Add plants you want to get to this wish list.</p>
+      </div>
+    
+    <table id="mainList" class="table table-dark table-hover container">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Number Needed</th>
+            <th scope="col">Cost per plant</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="item-0" class="tableNumber" scope="row">1</td>
+            <td>Tomatoes</td>
+            <td>20</td>
+            <td>$2-$6</td>
+          </tr>
+          <tr>
+            <td id="item-1" class="tableNumber" scope="row">2</td>
+            <td>Cilantro</td>
+            <td>10</td>
+            <td>$3</td>
+          </tr>
+          <tr>
+            <td id="item-2" class="tableNumber" scope="row">3</td>
+            <td>Broccoli</td>
+            <td>6</td>
+            <td>$4</td>
+          </tr>
+        </tbody>
+      </table><br>
+
+      <form class="container">
+        <div class="row">
+            <div class="col-4">
+              <input type="text" class="form-control form-color" placeholder="Name" id="nameInput">
+            </div>
+            <div class="col-4">
+              <input type="text" class="form-control form-color" placeholder="Number Needed" id="numberInput">
+            </div>
+            <div class="col-4">
+              <input type="text" class="form-control form-color" placeholder="Cost per plant" id="costInput">
+            </div>
+             <br> <br>     
+            </div>
+            <div class="container col-2">
+              <button id="addRow" type="button" class="btn btn-sm btn-success form-control">Submit</button>
+         </div>
+      </form>
+
+
+    <script src="index.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
